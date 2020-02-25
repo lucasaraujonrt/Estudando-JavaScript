@@ -2,11 +2,8 @@ var listElement = document.querySelector('#app ul'); // referenciando a tag
 var inputElement = document.querySelector('#app input'); // referenciando a tag
 var buttonElement = document.querySelector('#app button');// referenciando a tag
 
-var todos = [ // criando uma arry de todo
-    'Fazer cafe',
-    'Estudar JS',
-    'Tomar banho'
-];
+var todos = JSON.parse(localStorage.getItem('list_todos')) || []; // criando a array em JSON para salvar no arquivo do navegar, assim nao perdendo os dados
+
 
 function renderTodos(){ // Faz a render da lista de todo
     listElement.innerHTML = ''; // nao deixa adicionar a array denovo
