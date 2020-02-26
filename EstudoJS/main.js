@@ -11,7 +11,7 @@ xhr.onreadystatechange = function(){
 
 // PROMISES
 
-var mypromise = function() {
+/*var mypromise = function() {
   return new Promise(function(resolve, reject) {
     var xhr = new XMLHttpRequest(); // Funcionalidade do AJAX
     xhr.open("GET", "http://api.github.com/users/lucasaraujonrt"); // Buscando informacoes no GitHub
@@ -29,7 +29,9 @@ var mypromise = function() {
     };
   });
 };
-mypromise()
+*/
+axios
+  .get("https//api.github.com/users/lucasaraujonrt")
   .then(function(response) {
     console.log(response);
   }) // Chama o resolve com o JSON como parametro
